@@ -1,9 +1,9 @@
 services:
   - name: ollama-api
     env: docker
-    plan: free  # Change to "starter" or "pro" if needed
-    dockerCommand: "ollama serve -host 0.0.0.0"
+    plan: free
+    dockerCommand: "ollama serve --host 0.0.0.0"
     ports:
       - 11434
-    healthCheckPath: "/"  # Optional: Helps Render check if your service is running
-    autoDeploy: true  # Optional: Auto deploy when you push changes
+    healthCheckPath: "/"
+    autoDeploy: true
