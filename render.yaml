@@ -1,0 +1,11 @@
+services:
+  - name: ollama-api
+    type: web
+    env: docker
+    plan: free
+    disk:
+      name: ollama-storage
+      sizeGB: 10
+    envVars:
+      - key: PORT
+        value: "11434"
