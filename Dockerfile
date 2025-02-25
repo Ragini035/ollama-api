@@ -11,4 +11,4 @@ RUN curl -fsSL https://ollama.ai/install.sh | sh
 EXPOSE 11434
 
 # Start the Ollama server
-CMD ["ollama", "serve"]
+ENTRYPOINT ["ollama", "serve", "-host", "0.0.0.0"]
